@@ -1,0 +1,106 @@
+body.pragma-fe-test {
+	font-family: "Montserrat", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-size: 16px;
+	line-height: 24px;
+	color: #FFFFFF;
+	overflow-x: hidden;
+
+	.onboard {
+		height: unset !important;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+
+	a {
+		text-decoration: none;
+		outline: none;
+
+		&:active,
+		&:focus,
+		&:hover,
+		&:visited {
+			text-decoration: none;
+			outline: none;
+		}
+	}
+
+	button {
+		border: none;
+		outline: none;
+		cursor: pointer;
+		padding: 0;
+		background: initial;
+
+		&:focus,
+		&:hover {
+			outline: none;
+		}
+	}
+
+	img {
+		cursor: pointer;
+	}
+
+	#root {
+		position: relative;
+	}
+
+	*::selection {
+		color: white;
+		background-color: #0561d1;
+	}
+
+	*::-moz-selection {
+		color: white;
+		background-color: #0561d1;
+	}
+
+
+	.d-none {
+		display: none !important;
+	}
+
+	.d-hidden {
+		opacity: 0;
+	}
+
+	.no-scroll {
+		height: 100vh;
+		overflow-y: hidden;
+	}
+
+	.page-container {
+		position: relative;
+		background: #1d1d1d;
+		overflow-x: hidden;
+
+		display: flex;
+		flex-direction: column;
+
+		&.onboard {
+			width: 450px;
+			height: 400px;
+		}
+	}
+
+	.mask-parent {
+		position: relative !important;
+	}
+
+	.modal-parent {
+		position: relative;
+	}
+
+	.transparent {
+		opacity: 0 !important;
+
+		&>* {
+			opacity: 0 !important;
+		}
+	}
+}

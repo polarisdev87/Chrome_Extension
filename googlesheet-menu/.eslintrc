@@ -1,0 +1,29 @@
+{
+	"extends": ["prettier", "prettier/react"],
+	"parserOptions": {
+		"ecmaVersion": 2018,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"env": {
+		"browser": true,
+		"node": true
+	},
+	"rules": {
+		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+		"react/jsx-one-expression-per-line": 0,
+		"no-param-reassign": 0,
+		"no-unused-vars": 0,
+		"import/no-named-as-default": 0
+	},
+	"overrides": [
+		{
+			"files": ["**/*.test.js", "**/*.test.jsx"],
+			"env": {
+				"jest": true
+			}
+		}
+	]
+}

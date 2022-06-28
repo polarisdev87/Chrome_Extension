@@ -1,0 +1,50 @@
+@mixin defaultFont($style, $weight, $size, $lineHeight: normal) {
+	font-family: 'Montserrat', sans-serif !important;
+	font-style: $style !important;
+	font-weight: $weight !important;
+	font-size: $size !important;
+	line-height: $lineHeight !important;
+}
+
+@mixin color($color, $opacity:1) {
+	-webkit-text-fill-color: $color;
+	-webkit-opacity: $opacity;
+	color: $color;
+}
+
+@mixin textShrink() {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+@mixin verticalScroll($color: #26282A) {
+	overflow-y: auto;
+	overflow-x: hidden;
+
+	&::-webkit-scrollbar {
+		width: 4px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: 4px;
+		background-color: $color;
+	}
+}
+
+@mixin horizontalScroll($color: #26282A) {
+	overflow-y: hidden;
+	overflow-x: auto;
+
+	&::-webkit-scrollbar {
+		height: 4px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: 4px;
+		background-color: $color;
+	}
+}
+
+$appGreenColor: #61CEF7;
+$appErrorColor: #F46666;

@@ -1,0 +1,76 @@
+{
+	"manifest_version": 2,
+	"version": "1.2.1",
+	"short_name": "Pragma FE Test",
+	"name": "Pragma FE Test",
+	"background": {
+		"scripts": [
+			"app/background.js"
+		]
+	},
+	"browser_action": {
+		"default_popup": "index.html",
+		"default_title": "Pragma FE Test"
+	},
+	"icons": {
+		"16": "fav-48.png",
+		"48": "fav-48.png",
+		"128": "fav-128.png"
+	},
+	"commands": {
+		"_execute_browser_action": {
+			"suggested_key": {
+				"default": "Ctrl+Shift+L",
+				"linux": "Ctrl+Shift+L",
+				"windows": "Ctrl+Shift+L",
+				"mac": "Command+Shift+L"
+			}
+		}
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"http://*/*",
+				"https://*/*"
+			],
+			"css": [
+				"/static/css/app.css"
+			],
+			"js": [
+				"/static/js/app.js"
+			]
+		},
+		{
+			"matches": [
+				"http://*/*",
+				"https://*/*"
+			],
+			"css": [
+				"/static/css/content.css"
+			],
+			"js": [
+				"/static/js/content.js"
+			]
+		}
+	],
+	"externally_connectable": {
+		"matches": [
+			"*://*.google.com/*"
+		]
+	},
+	"web_accessible_resources": [
+		"/static/css/*",
+		"/app/*",
+		"/assets/*",
+		"/static/js/*",
+		"/static/media/*",
+		"/*.png"
+	],
+	"permissions": [
+		"tabs",
+		"storage",
+		"*://*/*"
+	],
+	"content_security_policy": "script-src 'self' 'sha256-GgRxrVOKNdB4LrRsVPDSbzvfdV4UqglmviH9GoBJ5jk='; object-src 'self'",
+	"key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAg5zDa9xcLJLdVuvq4QlTjzKAkn6WRDbr5UJkcr9JWPoXuszvr6kIpnmu2myCCDWZgHorWKnuLNLKsTwMe3LDZnWpnGo503q5bMJ/x1KIG8CpBTGPVjgUOFO0awhQ8x2vXmrLGh/RLdMCxkYuB2lSu7pQGeWV1R7OlD4dDWqpQ5ol64f60zZLoIxNGxw+BOj/nNdlVWv/M1bi3Wj5xBaWbdyICw3E7k8HWp5ZngfhIFEgVJEci/ykCG5SqBhs+pm7ZhAfOLsh3/aQBggefZlt1Y4tFdf62jQO5JgvLax5/+HuIlipT950HeqdjOv2uB7ZC5mRyfhBg7njvkq2q2E7sQIDAQAB"
+}
